@@ -1,0 +1,16 @@
+name: test_hello
+
+on: push
+
+jobs:
+    test_job_1:
+        name: test job 1
+        runs-on: ubuntu-lastest
+        steps:
+        - name: Print a greeting
+          env:
+              MY_VAR: My Name Is
+              FIRST_NAME: Zeng
+              LAST_NAME: Feng
+          run: |
+              echo $MY_VAR $FIRST_NAME $LAST_NAME
