@@ -8,7 +8,7 @@ jobs:
     steps:
     - name: print hello steps
       env:
-        MY_VAR: Hello, My Name Is
+        MY_VAR: Hello, 爱海游。 My Name Is
         FIRST_NAME: Zeng
         MIDDLE_NAME: Hai
         LAST_NAME: Ming
