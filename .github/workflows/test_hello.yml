@@ -1,16 +1,16 @@
-name: test_hello
-
+name: Greeting from Mona
 on: push
 
 jobs:
-    test_job_1:
-        name: test job 1
-        runs-on: ubuntu-lastest
-        steps:
-        - name: Print a greeting
-          env:
-              MY_VAR: My Name Is
-              FIRST_NAME: Zeng
-              LAST_NAME: Feng
-          run: |
-              echo $MY_VAR $FIRST_NAME $LAST_NAME
+  my-job:
+    name: My Job
+    runs-on: ubuntu-latest
+    steps:
+    - name: Print a greeting
+      env:
+        MY_VAR: Hi there! My name is
+        FIRST_NAME: Mona
+        MIDDLE_NAME: The
+        LAST_NAME: Octocat
+      run: |
+        echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.

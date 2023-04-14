@@ -1,0 +1,114 @@
+name: zf
+age: 18
+city:
+  code: "123"
+  adder: Shang Hai
+  court: China
+laungs:
+  - name: C#
+    id: 1
+  - name: JavaScript
+    id: 2
+  - name: TypeScript
+    id: 3
+books:
+  - - 1
+    - C#
+  - - 2
+    - JS
+  - - 3
+    - TS
+复杂的 key: 啦 啦 啦 啦 啦 啦
+companies:
+  - id: 1
+    name: company1
+    price: 200W
+  - id: 2
+    name: company2
+    price: 500W
+languages:
+  - Ruby
+  - Perl
+  - Python
+websites:
+  YAML: yaml.org
+  Ruby: ruby-lang.org
+  Python: python.org
+  Perl: use.perl.org
+boolean:
+  - true
+  - false
+float:
+  - 3.14
+  - 685230.15
+int:
+  - 123
+  - 0b1010_0111_0100_1010_1110
+null:
+  nodeName: node
+  parent: null
+string:
+  - 哈哈
+  - Hello world
+  - |
+    newline 
+    newline2
+date:
+  - 2018-02-17
+datetime:
+  - 2018-02-17T15:02:31+08:00
+
+defaults: &defaults
+  adapter:  postgres
+  host:     localhost
+
+development:
+  database: myapp_development
+  <<: *defaults
+
+test:
+  database: myapp_test
+  <<: *defaults
+
+test2:
+    - &showell Steve 
+    - Clark 
+    - Brian 
+    - Oren 
+    - *showell 
+
+test3:
+    a: !!str 123
+    b: !!str true
+    c: |
+       Foo
+       Bar
+    d: >
+       Foo
+       Bar
+    e: ~
+    s1: 这是一行字符串
+    s2: '内容\n字符串'
+    s3: "内容\n字符串"
+    s4: 'my''s day'
+    s5: |
+        Foo
+
+
+    s6: |+
+        Foo
+
+        
+
+    s7: |-
+        Foo
+
+    message: |-
+        <p style="color: red">
+          段落
+        </p>
+
+fun: function (){ return 1 }
+reg: /test/
+
+        
