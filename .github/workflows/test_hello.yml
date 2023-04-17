@@ -19,3 +19,10 @@ jobs:
 
   zf-job:
     runs-on: ubuntu-latest
+    steps:
+     - name: print ihaiu steps
+       env:
+           MY_NAME: http://blog.ihaiu.com
+       run: |
+          echo $MY_NAME
+      
